@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">AccountBook</string>
+    <string name="click_me_say_hi">Click Me Say Hi!</string>
 </resources>
