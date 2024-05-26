@@ -3,13 +3,10 @@ package com.example.accountbook;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -19,21 +16,16 @@ public class MainActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
         Log.d("ning", "onCreate");
+    }
+    public void clickHandlder(View source){
+        //获取UI界面中ID为R.id.hello_android的文本框
+        TextView tv = findViewById(R.id.hello_android);
 
-        // 设置窗口插图监听器
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
+        //改变文本框的文本内容
+        tv.setText("Hello Android-" + new java.util.Date());
+    }
 
-        // 获取按钮并设置点击监听器
-        Button buttonHelloWorld = findViewById(R.id.hello_world);
-        buttonHelloWorld.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Log.d("ning", "HelloWorld");
-            }
-        });
+    public void clickHandlderLog(View source){
+        Log.d("ning", "HelloWorld");
     }
 }
