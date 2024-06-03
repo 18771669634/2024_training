@@ -1,9 +1,13 @@
 <resources>
     <string name="app_name">AccountBook</string>
-    <string name="click_me_say_hi">Click Me Say Hi!</string>
+    <string name="hello_world">日志打印</string>
     <string name="text2">Activity Main 2</string>
 
     <string name="username">用户名:</string>
     <string name="password">密码:</string>
     <string name="login">登录</string>
+    <string name="skip_login">跳转登录页面</string>
+    <string name="SQL_read_store">数据库存储与读取</string>
+    <string name="store">访问网址内容并存储</string>
+    <string name="read">读取数据库内容</string>
 </resources>

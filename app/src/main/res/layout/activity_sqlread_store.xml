@@ -2,29 +2,27 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center">
+    android:orientation="vertical">
 
     <Button
-        android:id="@+id/hello_world"
+        android:id="@+id/store_to_sqlite"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/hello_world"
+        android:text="@string/store"
         android:textSize="@dimen/common_font_size"/>
 
     <Button
-        android:id="@+id/skip_login"
+        android:id="@+id/read_print"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/skip_login"
+        android:text="@string/read"
         android:textSize="@dimen/common_font_size"/>
 
-    <Button
-        android:id="@+id/SQL_read_store"
+    <TextView
+        android:id="@+id/show"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/SQL_read_store"
-        android:textSize="@dimen/common_font_size"/>
+        android:textSize="@dimen/button_font_size"/>
 
 
 </LinearLayout>
