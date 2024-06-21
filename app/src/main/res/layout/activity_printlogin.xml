@@ -10,7 +10,8 @@
         android:layout_height="0dp"
         android:layout_weight="1"
         android:text="Username"
-        android:gravity="center|bottom"/>
+        android:gravity="center|bottom"
+        android:textSize="@dimen/common_font_size"/>
 
     <TextView
         android:id="@+id/displayPassword"
@@ -18,6 +19,7 @@
         android:layout_height="0dp"
         android:layout_weight="1"
         android:text="Password"
-        android:gravity="center|top"/>
+        android:gravity="center|top"
+        android:textSize="@dimen/common_font_size"/>
 
 </LinearLayout>

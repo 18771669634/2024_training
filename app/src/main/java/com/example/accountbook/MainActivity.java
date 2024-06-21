@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.hello_world).setOnClickListener(this);
         findViewById(R.id.skip_login).setOnClickListener(this);
         findViewById(R.id.SQL_read_store).setOnClickListener(this);
+        findViewById(R.id.tally_book).setOnClickListener(this);
     }
 
     @Override
@@ -32,6 +33,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             startActivity(intent);
         } else if (v.getId() == R.id.SQL_read_store) {
             intent = new Intent(MainActivity.this, SQLReadStoreActivity.class);
+            startActivity(intent);
+        } else if (v.getId() == R.id.tally_book) {
+            intent = new Intent(MainActivity.this, Login_Accountbook_Activity.class);
             startActivity(intent);
         }
     }

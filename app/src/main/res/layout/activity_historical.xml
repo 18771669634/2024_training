@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/grey_f3">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <ImageView
+            android:id="@+id/historical_iv_goback"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:src="@mipmap/goback"
+            android:layout_marginLeft="10dp"/>
+
+        <Button
+            android:id="@+id/historical_btn_time"
+            android:layout_width="100dp"
+            android:layout_height="55dp"
+            android:background="@drawable/ac_main_recordbtn_bg"
+            android:layout_marginLeft="100dp"
+            android:text="按日期排序"
+            android:textSize="18sp"/>
+
+        <Button
+            android:id="@+id/historical_btn_money"
+            android:layout_width="100dp"
+            android:layout_height="55dp"
+            android:background="@drawable/ac_main_recordbtn_bg"
+            android:layout_marginLeft="220dp"
+            android:text="按金额排序"
+            android:textSize="18sp"/>
+
+
+
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/historical_lv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        android:divider="@color/grey_f3"
+        android:dividerHeight="6dp"
+        android:background="@color/grey_f3"
+        android:layout_marginTop="10dp"/>
+
+</LinearLayout>

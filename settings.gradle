@@ -21,4 +21,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "AccountBook"
 include ':app'
-include ':calculator01'
+include ':study_code'

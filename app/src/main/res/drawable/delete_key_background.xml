@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 背景层 -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#FFFFFF"/>
+            <corners android:radius="5dp"/>
+        </shape>
+    </item>
+    <!-- 图标层 -->
+    <item>
+        <bitmap
+            android:src="@mipmap/delete"
+            android:gravity="center"
+            android:tileMode="disabled"
+            android:width="30dp"
+            android:height="30dp"/>
+    </item>
+</layer-list>

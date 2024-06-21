@@ -3,11 +3,19 @@
     <string name="hello_world">日志打印</string>
     <string name="text2">Activity Main 2</string>
 
-    <string name="username">用户名:</string>
-    <string name="password">密码:</string>
+    <string name="username">账号</string>
+    <string name="password">密码</string>
     <string name="login">登录</string>
     <string name="skip_login">跳转登录页面</string>
     <string name="SQL_read_store">数据库存储与读取</string>
     <string name="store">访问网址内容并存储</string>
-    <string name="read">读取数据库内容</string>
+    <string name="read">读取数据库内容 </string>
+    <string name="tally">记账本</string>
+    <string name="editone">记一笔</string>
+    <string name="food">餐饮</string>
+    <string name="out">今日支出</string>
+    <string name="in">今日收入</string>
+    <string name="remain">预算剩余</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

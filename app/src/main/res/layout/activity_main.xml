@@ -26,5 +26,12 @@
         android:text="@string/SQL_read_store"
         android:textSize="@dimen/common_font_size"/>
 
+    <Button
+        android:id="@+id/tally_book"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/tally"
+        android:textSize="@dimen/common_font_size"/>
+
 
 </LinearLayout>
