@@ -10,23 +10,23 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="50dp">
-    <ImageView
-        android:id="@+id/record_iv_goback"
-        android:layout_width="45dp"
-        android:layout_height="45dp"
-        android:src="@mipmap/goback"
-        android:layout_marginLeft="10dp"/>
+        <ImageView
+            android:id="@+id/record_iv_goback"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:src="@mipmap/goback"
+            android:layout_marginLeft="10dp"/>
 
-    <com.google.android.material.tabs.TabLayout
-        android:id="@+id/record_tabs"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_centerHorizontal="true"
-        app:tabGravity="center"
-        app:tabMode="fixed"
-        app:tabTextColor="@color/grey_7D"
-        app:tabSelectedTextColor="@color/black"
-        app:tabIndicatorColor="@color/black"/>
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/record_tabs"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            app:tabGravity="center"
+            app:tabMode="fixed"
+            app:tabTextColor="@color/grey_7D"
+            app:tabSelectedTextColor="@color/black"
+            app:tabIndicatorColor="@color/black"/>
 
     </RelativeLayout>
 

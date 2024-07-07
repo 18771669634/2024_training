@@ -1,0 +1,7 @@
+<!-- key_background.xml -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 默认状态 -->
+    <item android:state_pressed="false" android:drawable="@color/grey_f3" />
+    <!-- 按下状态 -->
+    <item android:state_pressed="true" android:drawable="@color/grey_7D" />
+</selector>

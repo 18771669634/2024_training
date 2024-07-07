@@ -45,7 +45,7 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
         super(context, DB_NAME, null, DB_VERSION);
     }
 
-    // 使用线程安全的单例模式获取数据库帮助器的唯一实例
+    // 使用线程安全的单例模式（懒汉模式）获取数据库帮助器的唯一实例
     public static synchronized MySQLiteHelper getInstance(Context context) {
         if (mHelper == null) {
             mHelper = new MySQLiteHelper(context);

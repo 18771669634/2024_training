@@ -8,29 +8,43 @@
 
     <!--  codes 是 字符的ASCII码  -->
     <Row>
-        <Key android:codes="49" android:keyLabel="1"/>
-        <Key android:codes="50" android:keyLabel="2"/>
-        <Key android:codes="51" android:keyLabel="3"/>
-        <Key android:codes="-5" android:keyIcon="@mipmap/delete"/>
+        <Key android:codes="49" android:keyLabel="1"
+            android:keyBackground="@drawable/key_background"/>
+        <Key android:codes="50" android:keyLabel="2"
+            android:keyBackground="@drawable/key_background"/>
+        <Key android:codes="51" android:keyLabel="3"
+            android:keyBackground="@drawable/key_background"/>
+        <Key android:codes="-5" android:keyIcon="@mipmap/delete"
+            android:keyBackground="@drawable/key_background"/>
     </Row>
 
     <Row>
-        <Key android:codes="52" android:keyLabel="4"/>
-        <Key android:codes="53" android:keyLabel="5"/>
-        <Key android:codes="54" android:keyLabel="6"/>
-        <Key android:codes="-4" android:keyHeight="150dp" android:keyLabel="完成"/>
+        <Key android:codes="52" android:keyLabel="4"
+            android:keyBackground="@drawable/key_background"/>
+        <Key android:codes="53" android:keyLabel="5"
+            android:keyBackground="@drawable/key_background"/>
+        <Key android:codes="54" android:keyLabel="6"
+            android:keyBackground="@drawable/key_background"/>
+        <Key android:codes="-4" android:keyHeight="150dp" android:keyLabel="完成"
+            android:keyBackground="@drawable/key_background"/>
     </Row>
 
     <Row>
-        <Key android:codes="55" android:keyLabel="7"/>
-        <Key android:codes="56" android:keyLabel="8"/>
-        <Key android:codes="57" android:keyLabel="9"/>
+        <Key android:codes="55" android:keyLabel="7"
+            android:keyBackground="@drawable/key_background"/>
+        <Key android:codes="56" android:keyLabel="8"
+            android:keyBackground="@drawable/key_background"/>
+        <Key android:codes="57" android:keyLabel="9"
+            android:keyBackground="@drawable/key_background"/>
     </Row>
 
     <Row>
-        <Key android:codes="-3" android:keyLabel="清零"/>
-        <Key android:codes="48" android:keyLabel="0"/>
-        <Key android:codes="46" android:keyLabel="."/>
+        <Key android:codes="-3" android:keyLabel="清零"
+            android:keyBackground="@drawable/key_background"/>
+        <Key android:codes="48" android:keyLabel="0"
+            android:keyBackground="@drawable/key_background"/>
+        <Key android:codes="46" android:keyLabel="."
+            android:keyBackground="@drawable/key_background"/>
     </Row>
 
 </Keyboard>

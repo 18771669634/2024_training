@@ -16,22 +16,22 @@
 
     <Button
         android:id="@+id/ac_main_btn_more"
-        android:layout_width="55dp"
-        android:layout_height="55dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
         android:layout_marginRight="20dp"
-        android:background="@drawable/ac_main_more_btn"
+        android:background="@drawable/ac_main_recordbtn_bg"
         android:text="历史记录"
-        android:textSize="20sp"/>
+        android:textSize="16sp"/>
 
     <Button
         android:id="@+id/ac_main_btn_edit"
-        android:layout_width="100dp"
-        android:layout_height="55dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:background="@drawable/ac_main_recordbtn_bg"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:text="@string/editone"
-        android:textSize="20sp"/>
+        android:textSize="16sp"/>
 </RelativeLayout>

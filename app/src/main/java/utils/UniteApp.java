@@ -9,7 +9,7 @@ public class UniteApp extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-        // 初始化数据库
+        // 初始化数据库 成为 全局资源
         AccountBookHelper.initDB(getApplicationContext());
     }
 }

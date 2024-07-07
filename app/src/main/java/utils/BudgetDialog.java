@@ -24,6 +24,7 @@ public class BudgetDialog extends Dialog implements View.OnClickListener {
     Button cancel_btn, ensure_btn;
 
     public interface OnEnsureListener { // 接口
+        // 接口方法，用于通知 调用方 确定操作完成，并传递必要的数据 money
         public void onEnsure(float money);
     }
 
@@ -67,6 +68,7 @@ public class BudgetDialog extends Dialog implements View.OnClickListener {
                 ToastUtil.show(getContext(), "输入数据不能为空");
                 return;
             }
+
             float money = Float.parseFloat(moneyDate);
             if(money <= 0) {
                 ToastUtil.show(getContext(), "预算金额不能小于等于0");

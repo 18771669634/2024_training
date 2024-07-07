@@ -132,7 +132,8 @@ public abstract class BaseRecordFragment extends Fragment implements View.OnClic
         // 显示自定义键盘
         KeyBoardUtils boardUtils = new KeyBoardUtils(keyboardView, moneyEt);
         boardUtils.showKeyboard();
-        // 设置接口监听 “确定” 按钮被点击
+
+        // 设置接口监听 键盘 “确定” 按钮被点击
         boardUtils.setOnEnsureListener(new KeyBoardUtils.OnEnsureListener() {
             @Override
             public void onEnsure() {

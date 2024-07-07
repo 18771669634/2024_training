@@ -36,9 +36,11 @@ public class RecordActivity extends AppCompatActivity {
                 finish();
             }
         });
+
         // 查找控件
         tabLayout = findViewById(R.id.record_tabs);
         viewPager = findViewById(R.id.record_vp);
+
         // 设置ViewPager加载页面
         initPager();
 
@@ -62,7 +64,7 @@ public class RecordActivity extends AppCompatActivity {
         fragmentList.add(outFrag);
         fragmentList.add(inFrag);
 
-        // 创建适配器  参数分别是啥，需要去了解
+        // 创建适配器
         RecordFragPagerAdapter pagerAdapter = new RecordFragPagerAdapter(getSupportFragmentManager(), fragmentList);
 
         // 设置适配器

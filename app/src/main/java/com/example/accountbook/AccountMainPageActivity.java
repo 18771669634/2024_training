@@ -53,7 +53,7 @@ public class AccountMainPageActivity extends AppCompatActivity implements View.O
         // 更多 按钮的点击事件
         findViewById(R.id.ac_main_btn_more).setOnClickListener(this);
 
-        // 设置时间
+        // 设置今日时间 year, month, day
         initTime();
 
         // ListView
@@ -66,6 +66,7 @@ public class AccountMainPageActivity extends AppCompatActivity implements View.O
 
         // 设置适配器：加载每一行数据到列表当中
         adapter = new AccountAdapter(this, mDatas);
+        // 将适配器设置给 ListView
         todayLv.setAdapter(adapter);
     }
 
@@ -96,10 +97,18 @@ public class AccountMainPageActivity extends AppCompatActivity implements View.O
 
     // 当 Acitvity 获取 焦点 时，会调用的方法
     @Override
-    protected void onResume() { // 因为在返回时，还可以再点击记一笔，数据会再次更新，所以把数据更新放在这里
+    protected void onResume() { // 因为在记录页面返回主页面时，数据会再次更新，所以把数据更新放在这里
         super.onResume();
         loadAccountDate();  // 加载数据库数据到ListView中
         setTopTvDate(); // 设置顶部数据的显示
+    }
+
+    // 加载数据库数据到ListView中,当天的账单
+    private void loadAccountDate() {
+        List<Account> lst = AccountBookHelper.getAccountListOneDayFromAccountbook(username, year, month, day);
+        mDatas.clear(); // 将原来的数据清空
+        mDatas.addAll(lst); // 将 更新后 的数据添加进去
+        adapter.notifyDataSetChanged(); // 通知视图数据已更新，并且需要重新绘制
     }
 
     // 设置头布局的 今日支出 和 今日收入 显示
@@ -123,13 +132,6 @@ public class AccountMainPageActivity extends AppCompatActivity implements View.O
         }
     }
 
-    // 加载数据库数据到ListView中,当天的账单
-    private void loadAccountDate() {
-        List<Account> lst = AccountBookHelper.getAccountListOneDayFromAccountbook(username, year, month, day);
-        mDatas.clear(); // 将原来的数据清空
-        mDatas.addAll(lst); // 将 更新后 的数据添加进去
-        adapter.notifyDataSetChanged(); // 通知视图数据已更新，并且需要重新绘制
-    }
 
     @Override
     public void onClick(View v) {
@@ -149,16 +151,17 @@ public class AccountMainPageActivity extends AppCompatActivity implements View.O
 
     // 显示 预算 设置对话框
     private void showBudgetDialog() {
-        BudgetDialog budgetDialog = new BudgetDialog(this);
+        BudgetDialog budgetDialog = new BudgetDialog(this); // 创建 BudgetDialog 对象
         budgetDialog.show();    // 预算设置框显示出来
 
+        // 设置回调接口
         budgetDialog.setOnEnsureListener(new BudgetDialog.OnEnsureListener() {
             @Override
             public void onEnsure(float money) {
                 // 将预算金额写入 共享参数 中，存储
                 SharedPreferences.Editor edit = preferences.edit();
                 edit.putFloat("budgetMoney", money);
-                edit.commit();
+                edit.apply();
 
                 // 计算 剩余预算
                 float todayMoney_out = AccountBookHelper.getSumMoneyOneDay_Out_In(username, year, month, day, 0);

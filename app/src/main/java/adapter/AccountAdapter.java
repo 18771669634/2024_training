@@ -15,6 +15,7 @@ import java.util.List;
 
 import javabean.Account;
 
+/* 将一组 Account 对象填充到一个列表视图（如 ListView）中 */
 public class AccountAdapter extends BaseAdapter {
 
     Context context;
@@ -25,7 +26,7 @@ public class AccountAdapter extends BaseAdapter {
     public AccountAdapter(Context context, List<Account> mDatas) {
         this.context = context;
         this.mDatas = mDatas;
-        inflater = LayoutInflater.from(context);    // 这样不用每次都调用
+        inflater = LayoutInflater.from(context);
 
         Calendar calendar = Calendar.getInstance();
         year = calendar.get(Calendar.YEAR);
@@ -50,16 +51,19 @@ public class AccountAdapter extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        // 得再细看看，明白也没有特别明白
+        // ViewHolder 用于缓存视图中的子视图，减少不必要的 findViewById 操作
         ViewHolder holder = null;
 
-        // 检查现有的 View 是否可复用，否则创建新的
+        // 如果 convertView 为 null，则表示没有可以重用的视图，需要创建一个新的视图
         if (convertView == null) {
             convertView = inflater.inflate(R.layout.item_ac_mainlv, parent, false);
             holder = new ViewHolder(convertView);
+
+            // 将 ViewHolder 存储在 convertView 中
             convertView.setTag(holder);
         } else {
-            holder = (ViewHolder) convertView.getTag();
+            // 获取存储在 convertView 中的 ViewHolder
+            holder = (ViewHolder)convertView.getTag();
         }
 
         Account bean = mDatas.get(position);
@@ -78,6 +82,7 @@ public class AccountAdapter extends BaseAdapter {
         return convertView;
     }
 
+    // 缓存子视图的引用，避免多次调用 findViewById，从而提高性能
     class ViewHolder {
         ImageView typeIv;
         TextView typeTv, beizhuTv, timeTv, moneyTv;

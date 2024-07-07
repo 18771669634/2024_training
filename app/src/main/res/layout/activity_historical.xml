@@ -19,8 +19,8 @@
 
         <Button
             android:id="@+id/historical_btn_time"
-            android:layout_width="100dp"
-            android:layout_height="55dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:background="@drawable/ac_main_recordbtn_bg"
             android:layout_marginLeft="100dp"
             android:text="按日期排序"
@@ -28,8 +28,8 @@
 
         <Button
             android:id="@+id/historical_btn_money"
-            android:layout_width="100dp"
-            android:layout_height="55dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:background="@drawable/ac_main_recordbtn_bg"
             android:layout_marginLeft="220dp"
             android:text="按金额排序"

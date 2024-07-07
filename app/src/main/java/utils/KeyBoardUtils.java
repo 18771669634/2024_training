@@ -55,6 +55,7 @@ public class KeyBoardUtils {
         public void onKey(int primaryCode, int[] keyCodes) {
             Editable editable = editText.getText();
             int start = editText.getSelectionStart();
+
             if(primaryCode == Keyboard.KEYCODE_DELETE) {//删除
                 if (editable != null && editable.length() > 0) {
                     if (start > 0) {
@@ -99,11 +100,4 @@ public class KeyBoardUtils {
         }
     }
 
-    // 隐藏键盘
-    public void hiteKeyboard() {
-        int visibility = keyboardView.getVisibility();
-        if(visibility == View.VISIBLE || visibility == View.INVISIBLE) {
-            keyboardView.setVisibility(View.GONE);
-        }
-    }
 }

@@ -48,7 +48,6 @@ public class InFragment extends BaseRecordFragment {
     @Override
     public void saveAccountToDB() {
         ac.setKind(1);
-        // 备注还未设置
 
         long insert_re = AccountBookHelper.insertRecord(ac);
     }

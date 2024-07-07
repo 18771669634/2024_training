@@ -49,7 +49,7 @@ public class OutFragment extends BaseRecordFragment {
     @Override
     public void saveAccountToDB() {
         ac.setKind(0);
-        // 备注还未设置
+
         long insert_re = AccountBookHelper.insertRecord(ac);
     }
 
